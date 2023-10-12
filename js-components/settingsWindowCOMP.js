@@ -53,7 +53,7 @@ class SettingsWindow {
                 </div>
 
                 <div class='block-nickname'>
-                    <span>@".$GLOBALS['myaccount_login']."</span>
+                    <span>@iam1947</span>
                 </div>
 
                 <div class='block-name'>
