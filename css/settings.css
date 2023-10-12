@@ -26,8 +26,9 @@ body {
 
 }
 
-#content {
+.content {
 
+    width:63%;
     /* height:100%; */
     padding:0px;
     height: fit-content;
