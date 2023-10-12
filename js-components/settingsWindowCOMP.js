@@ -45,7 +45,7 @@ class SettingsWindow {
 
                 <div class='block-avatar'>
                     <div onclick='settings_window.changeAvatarWindow()' class='block-avatar-img-container'>
-                        <img id='block-user-avatar' class='block-avatar-img' src='/".$GLOBALS['myaccount_avatar']."'>
+                        <img id='block-user-avatar' class='block-avatar-img' src='/'>
                         <div class='img-container-border'>
                            <img src='/img/@settings/photo-camera.png'>
                         </div>
@@ -58,29 +58,29 @@ class SettingsWindow {
 
                 <div class='block-name'>
                     <span>Ім'я</span>
-                    <input class='focus-blue' oninput='settings_window.settings.onStateChanged(event)' id='user-name' type='text' value=\"".$GLOBALS['myaccount_name']."\">
+                    <input class='focus-blue' oninput='settings_window.settings.onStateChanged(event)' id='user-name' type='text' value=''>
                     <span>Фамілія</span>
-                    <input class='focus-blue' oninput='settings_window.settings.onStateChanged(event)' id='user-surname' type='text' value=\"".$GLOBALS['myaccount_surname']."\">
+                    <input class='focus-blue' oninput='settings_window.settings.onStateChanged(event)' id='user-surname' type='text' value=''>
                 </div>
 
                 <div class='block-status'>
                     <span>Статус</span>
-                    <input class='focus-blue' oninput='settings_window.settings.onStateChanged(event)' id='user-status' type='text' value=\"".$GLOBALS['myaccount_status']."\">
+                    <input class='focus-blue' oninput='settings_window.settings.onStateChanged(event)' id='user-status' type='text' value=''>
                 </div>
 
                 <div class='block-profession'>
                     <span>Професія</span>
-                    <input class='focus-blue' oninput='settings_window.settings.onStateChanged(event)' id='user-profession' type='text' value=\"".$GLOBALS['myaccount_profession']."\">
+                    <input class='focus-blue' oninput='settings_window.settings.onStateChanged(event)' id='user-profession' type='text' value=''>
                 </div>
 
                 <div class='block-about-me'>
                     <span>Про мене</span>
-                    <textarea class='focus-blue' oninput='settings_window.settings.onStateChanged(event)' id='user-about-me'>".$GLOBALS['myaccount_about_me']."</textarea>
+                    <textarea class='focus-blue' oninput='settings_window.settings.onStateChanged(event)' id='user-about-me'></textarea>
                 </div>
 
                 <div class='block-password'>
                     <span>Пароль</span>
-                    <input readonly class='focus-blue' oninput='settings_window.settings.onStateChanged(event)' id='user-password' type='password' value=\"".$GLOBALS['myaccount_password']."\">
+                    <input readonly class='focus-blue' oninput='settings_window.settings.onStateChanged(event)' id='user-password' type='password' value=''>
                 </div>
 
                 <button class='not-active' id='save-settings-changes' onclick='settings_window.saveSettingsChanges()'>Зберегти</button>
@@ -111,7 +111,7 @@ class SettingsWindow {
                 <span>Оберіть аватарку</span>
             </div>
             <div class='caw-avatar-container'>
-                <img id='caw-avatar-img' src='/".$GLOBALS['myaccount_avatar']."'>
+                <img id='caw-avatar-img' src='/'>
                 <input id='caw-avatar-img-input' type='file'>
                 <div id='caw-avatar-img-shower'>
                     <img src='/img/@settings/photo-camera.png'>
@@ -165,7 +165,7 @@ class SettingsWindow {
        console.log('update avatar');
        let avatar_file = document.getElementById('caw-avatar-img-input');
        const formData = new FormData();
-       formData.append('user_login', '".$GLOBALS['myaccount_login']."');
+       formData.append('user_login', 'iam1947');
        formData.append('avatar', avatar_file.files[0]);   
 
        fetch('http://www.jsmanach.rf.gd/services/@settings/updateAvatar.php', {
@@ -197,7 +197,7 @@ class SettingsWindow {
         let myaccount_about_me = document.getElementById('user-about-me').value;
 
        const formData = new FormData();
-       formData.append('myaccount_id', '".$GLOBALS['myaccount_id']."');   
+       formData.append('myaccount_id', '99');   
        formData.append('myaccount_name', myaccount_name);   
        formData.append('myaccount_surname', myaccount_surname); 
        formData.append('myaccount_password', myaccount_password);  
