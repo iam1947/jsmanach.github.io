@@ -17,6 +17,15 @@ body {
     /* background-color: purple; */
 }
 
+#app {
+
+    width: 70%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+}
+
 #content {
 
     /* height:100%; */
