@@ -238,4 +238,4 @@ class SettingsWindow {
 }
 
 let settings_window = new SettingsWindow();
-settings_window.render();";
+settings_window.render();
